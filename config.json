@@ -1,0 +1,36 @@
+{
+  "template": "D - SaaS Landing",
+  "description": "Modern SaaS landing page with hero section and gradients",
+  "domains": [
+    {
+      "domain": "smartautomatedbidding.com",
+      "siteName": "Smart Automated Bidding"
+    },
+    {
+      "domain": "smartppcplatform.com",
+      "siteName": "Smart PPC Platform"
+    },
+    {
+      "domain": "smartgoogleads.com",
+      "siteName": "Smart Google Ads"
+    },
+    {
+      "domain": "ailandingpagepro.com",
+      "siteName": "AI Landing Page Pro"
+    }
+  ],
+  "customization": {
+    "primaryColor": "#667eea",
+    "secondaryColor": "#764ba2",
+    "style": "Modern SaaS landing with gradient backgrounds and bold colors",
+    "fonts": {
+      "all": "Plus Jakarta Sans, sans-serif"
+    },
+    "features": {
+      "heroSection": true,
+      "statsDisplay": true,
+      "gradientBackgrounds": true,
+      "modernCTA": true
+    }
+  }
+}
