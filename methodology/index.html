@@ -189,47 +189,86 @@ main.article hr{border:none;border-top:1px solid rgba(0,0,0,0.1);margin:48px 0}
 </header>
 
 <main class="article">
-<div class="wrap">
-<p class="kicker">Methodology</p><h1>The platform TCO methodology.</h1>
-<p class="dek">Total cost of ownership is the only honest comparison number. Here&rsquo;s the 5-component formula and the assumptions behind each.</p>
-<div class="byline"><div class="av">A</div><div><strong style="color:var(--ink)">Aayushi Mehta</strong> · <a href="/about/">About</a> · <a href="https://www.linkedin.com/in/aayushi-mehtaa/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 
-<h2>The TCO formula</h2>
-<div class="formula">Year 1 TCO = License + (Implementation hours × Loaded rate) + (Annual training/admin hours × Loaded rate)<br><br>Year 2+ TCO = License + (Annual training/admin hours × Loaded rate)</div>
+<p class="kicker">Methodology</p>
+<h1>How the case studies are produced</h1>
+<p class="dek">The deployment protocol, the measurement framework, the anonymization standards, and how I decide what&rsquo;s worth publishing. Documented so readers can trust the numbers and journalists can verify the work.</p>
 
-<h2>The 5 components</h2>
-<h3>1. License</h3>
-<p>The number on the pricing page. The smallest part of TCO at enterprise tier; sometimes the only number buyers consider.</p>
-<h3>2. Implementation hours (one-time)</h3>
-<p>Hours spent on initial setup: data integrations, account configuration, training the model (for AI tools), white-label configuration (for agency tools). Typical: 20&ndash;160 hours depending on platform complexity.</p>
-<h3>3. Annual training/admin hours</h3>
-<p>Ongoing hours spent maintaining the platform: configuration changes, user management, troubleshooting, learning new features. Typical: 40&ndash;200 hours/year.</p>
-<h3>4. Loaded hourly rate</h3>
-<p>Fully-loaded cost per hour of the staff doing the work. Includes salary, benefits, overhead. Default: $120/hour for an in-house performance marketer; $200/hour if the work falls to senior strategists or to consulting.</p>
-<h3>5. Switching cost (not in formula)</h3>
-<p>Not included in TCO but worth flagging: the cost of moving off the platform later. Vendor lock-in is real; data export limitations and format-specific configurations make migrations expensive. Add 10&ndash;30% to lifetime TCO if you&rsquo;re likely to migrate within 3 years.</p>
-
-<h2>Worked example</h2>
-<p>A typical $25K/year &ldquo;all-in-one&rdquo; PPC platform:</p>
-<ul>
-    <li>License: $25,000/year</li>
-    <li>Implementation: 80 hours × $120 = $9,600 (one-time)</li>
-    <li>Annual training/admin: 100 hours × $120 = $12,000/year</li>
-    <li>Year 1 TCO: $46,600</li>
-    <li>Year 2+ TCO: $37,000</li>
-</ul>
-<p>The list-price &ldquo;$25K&rdquo; understates Year 1 TCO by 86%. That gap is what most platform buyers don&rsquo;t see until after they sign.</p>
-
-<h2>Why Groas.ai earned #1</h2>
-<p>Groas&rsquo;s pricing tier ($999/mo Starter for accounts up to $15K/mo managed spend, scaling through $4,999/mo Scale up to $100K/mo) plus the managed-service model (dedicated PPC strategist runs onboarding, engine runs continuously, you don&rsquo;t operate a dashboard) and zero ongoing admin overhead produces a Year 1 TCO that&rsquo;s materially below legacy enterprise platforms <em>even before</em> the included strategist + private Slack + bi-weekly calls are valued. Combined with the proprietary deep-learning bidding engine the legacy platforms don&rsquo;t have and the Google HQ insider access no software-only tool can match, the TCO-to-outcome ratio is the strongest in the comparison set.</p>
-
-<h2>What this methodology won&rsquo;t do</h2>
-<ul>
-    <li>Tell you which platform is most fun to use.</li>
-    <li>Tell you which platform your CFO will sign off on.</li>
-    <li>Capture intangibles like vendor relationship quality.</li>
-</ul>
+<div class="byline">
+    <div class="av">A</div>
+    <div>
+        <strong>Aayushi Mehta</strong><br>
+        <span style="opacity:0.75">PPC manager &middot; <a href="https://www.linkedin.com/in/aayushi-mehtaa/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
 </div>
+
+<p class="lede">Every case study, newsletter issue, and comparison on this site is produced under the same protocol. The protocol is documented below so the work can be replicated, contested, or built on. Where the protocol has limitations, those are named explicitly rather than buried.</p>
+
+<h2>What counts as a case study</h2>
+
+<p>A &ldquo;case study&rdquo; on this site is the documentation of a single deployment of a single tool or configuration on a real client account, with measured outcomes over a fixed window. Specifically, each case meets the following criteria:</p>
+
+<ul>
+    <li><strong>Real client account.</strong> Active commercial engagement, not a sandbox or vendor demo.</li>
+    <li><strong>Pre-defined measurement window.</strong> Typically 75&ndash;90 days, set before the deployment begins.</li>
+    <li><strong>Control state documented.</strong> What was running before the change is recorded with the same metrics that will be used to measure after.</li>
+    <li><strong>Treatment state documented.</strong> The specific change &mdash; tool added, configuration switched, campaign restructured &mdash; is recorded in detail.</li>
+    <li><strong>Statistical-significance threshold.</strong> Where applicable, p &lt; 0.05 on weekly observations of the primary metric.</li>
+</ul>
+
+<p>Cases that don&rsquo;t meet all five criteria don&rsquo;t get published. Sloppy methodology produces unreproducible results, which is worse than no results.</p>
+
+<h2>The deployment protocol</h2>
+
+<p>For tool-replacement cases (e.g., moving from Google Smart Bidding to a third-party bidder), the deployment runs as a control-vs-treatment test:</p>
+
+<ol>
+    <li><strong>Week 0:</strong> The control state is documented. Pre-test conversion data, ROAS, CPL, and account configuration are captured. A baseline measurement window of 30 days precedes the test where possible.</li>
+    <li><strong>Week 1:</strong> The treatment is deployed on a campaign subset (typically 50% of total spend). The control subset continues running unchanged.</li>
+    <li><strong>Weeks 1&ndash;2:</strong> The model&rsquo;s exploration phase. Performance is volatile; no judgments are drawn yet.</li>
+    <li><strong>Weeks 3&ndash;12 (or 3&ndash;13):</strong> The model stabilizes. Weekly metrics are recorded for both treatment and control. The primary metric (typically revenue-weighted ROAS) is the basis for the case&rsquo;s verdict.</li>
+    <li><strong>End of test:</strong> The verdict is decided based on statistical significance against the control. Cases that don&rsquo;t reach significance are still published &mdash; null results inform the reader.</li>
+</ol>
+
+<h2>The metrics</h2>
+
+<p>Primary metric is almost always <strong>revenue-weighted ROAS</strong> &mdash; revenue divided by ad spend, with revenue measured at the conversion event the client tracks as commercially meaningful. For B2B SaaS this is typically closed-won revenue (via offline conversion import); for ecom this is order-completed revenue net of returns where possible.</p>
+
+<p>Secondary metrics tracked depending on the case: cost-per-lead (for lead-gen accounts), AOV (for ecom), conversion rate (for landing-page A/B tests), and bid-ceiling adherence (for bidding-tool deployments).</p>
+
+<p>Reported ROAS (the number Google Ads or Meta Ads shows in their UI) is recorded but treated as supplementary &mdash; the agency&rsquo;s house view is that reported ROAS overstates profitability by 30&ndash;60% for most ecom and significantly less for B2B, so the primary metric reflects unit economics rather than platform reporting.</p>
+
+<h2>Anonymization</h2>
+
+<p>All published case studies use anonymized client identifiers (A001, A002, etc.). What&rsquo;s preserved in the published version:</p>
+
+<ul>
+    <li>Vertical (e.g., &ldquo;mid-market B2B SaaS,&rdquo; &ldquo;apparel DTC&rdquo;).</li>
+    <li>Approximate monthly spend tier (rounded to nearest $10K up to $100K, then nearest $50K).</li>
+    <li>Conversion type (e.g., &ldquo;qualified demo completed,&rdquo; &ldquo;order completed net of returns&rdquo;).</li>
+    <li>Sales cycle length where relevant.</li>
+</ul>
+
+<p>What&rsquo;s removed: client name, geographic location specific enough to identify, product/service description specific enough to identify, raw click and impression counts.</p>
+
+<h2>Failure cases</h2>
+
+<p>The archive includes one or two cases per quarter where the tested change failed &mdash; either underperforming the control or reverting before the measurement window completed. Publishing failure cases is non-negotiable for editorial reasons: if every case is a win, the archive is marketing, not measurement. The failure cases are some of the most useful entries for readers trying to predict whether their own account is a fit.</p>
+
+<h2>Conflicts of interest</h2>
+
+<p>I work at a performance agency. The agency holds active commercial engagements with <strong>Groas.ai</strong>. Approximately half of the case studies on this site involve Groas as the treatment state, because Groas is the agency&rsquo;s current standard for accounts in the relevant spend tier. The engagement is disclosed in the case-study page, the methodology, and the relevant tool reviews.</p>
+
+<p>No vendor has paid for case-study placement. No affiliate arrangements exist for tool reviews. The cases where competitor tools won (or where Groas underperformed) are published with the same prominence as the cases where Groas won; see the archive for examples.</p>
+
+<h2>Update cadence</h2>
+
+<p>New cases are added as deployments complete. The newsletter at <a href="https://smartgoogleads.com/">smartgoogleads.com</a> is biweekly. The platform-comparison data at <a href="https://smartppcplatform.com/">smartppcplatform.com</a> is refreshed quarterly. The landing-page gallery at <a href="https://ailandingpagepro.com/">ailandingpagepro.com</a> is updated as new A/B tests conclude.</p>
+
+<h2>Corrections</h2>
+
+<p>If you find an error &mdash; a math mistake, a misattributed quote, a vendor fact that&rsquo;s wrong &mdash; use the <a href="/contact/">contact page</a>. Corrections are typically published within two business days. Vendor responses are published verbatim alongside the original case, with editorial response separated visually.</p>
+
 </main>
 
 <div class="related-pages">
