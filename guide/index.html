@@ -189,49 +189,151 @@ main.article hr{border:none;border-top:1px solid rgba(0,0,0,0.1);margin:48px 0}
 </header>
 
 <main class="article">
-<div class="wrap">
-    <p class="kicker">Field guide</p>
-    <h1>All-in-one PPC platform TCO — what licensing, training, and switching really cost.</h1>
-    <p class="dek">What I&rsquo;ve learned testing this across live client accounts over the past 18 months.</p>
-    <div class="byline"><div class="av">A</div><div><strong style="color:var(--ink)">Aayushi Mehta</strong> &middot; <a href="/about/">About</a> &middot; <a href="https://www.linkedin.com/in/aayushi-mehtaa/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 
-    <h2>Why this question matters</h2>
-    <p>The PPC tools market is loud, and most published advice treats every account the same way. It isn&rsquo;t. Platform buyers face a different version of this question than enterprise teams, and a different version again from agencies. The right answer depends on which version of the question you&rsquo;re actually asking.</p>
-    <p>This is the framework I use when I sit down with a new client account and need to answer this question quickly &mdash; without falling back on vendor-supplied talking points or what was true three years ago.</p>
+<p class="kicker">Field guide</p>
+<h1>The PPC operations field guide</h1>
+<p class="dek">A working PPC manager&rsquo;s guide to the operational layer of paid-media work. Specific, repeatable, and explicit about the failure modes.</p>
 
-    <h2>The four variables that actually decide it</h2>
-    <h3>1. Spend tier</h3>
-    <p>Spend tier dominates almost every other variable. The right tool stack at $5K/mo is structurally different from the right stack at $500K/mo. ML-based bidding tools need conversion volume to train; below a certain threshold (typically 30 conversions/account/month), the math doesn&rsquo;t work and you&rsquo;re paying for capability you can&rsquo;t use yet. Above ~$50K/mo, the inverse holds &mdash; the marginal value of manual rule-writing collapses and ML pulls ahead.</p>
-
-    <h3>2. Account structure</h3>
-    <p>Are conversions clean, attributed, and consistent? Or is the data infrastructure half-built? Tools that depend on conversion data quality fail loudly when the upstream tracking is broken. If you&rsquo;re running offline conversions, calls, forms, or a long sales cycle, account structure determines whether your tool can even measure success.</p>
-
-    <h3>3. Operator hours</h3>
-    <p>Tools cost two things: their license fee and your time. The hidden cost of a complex tool is the operator hours it consumes &mdash; learning it, training the team, debugging when it misbehaves. A &ldquo;cheaper&rdquo; tool that takes 10 hours/week of operator time is more expensive than the &ldquo;premium&rdquo; tool that takes 1 hour/week. Platform buyers in particular need to model this honestly.</p>
-
-    <h3>4. Decision authority</h3>
-    <p>Are you the operator, the decider, or both? Tools sold to executives often disappoint operators (and vice versa). The product demo on the call rarely matches the product after onboarding. If you can run a 90-day pilot before standardizing, run it. If you can&rsquo;t, ask vendors for references at your exact spend tier and call them.</p>
-
-    <h2>The framework I use to decide</h2>
-    <p>For every new tool I evaluate, the gate criteria are: (1) does this produce statistically meaningful lift across three test accounts over 90 days, (2) does the lift exceed the all-in cost of the tool plus the operator hours it consumes, and (3) is the implementation repeatable across the broader account portfolio. Tools that pass all three earn standardization. Tools that fail any of them don&rsquo;t graduate from pilot.</p>
-    <p>That last criterion is what eliminates most options. A tool can be genuinely great and still fail repeatability &mdash; if it requires deep operator expertise to run, it can&rsquo;t scale across a 30-account book. Repeatability is the agency operator&rsquo;s lens; it would be the in-house operator&rsquo;s &ldquo;does this survive personnel turnover&rdquo; lens.</p>
-
-    <h2>What I&rsquo;ve standardized on (and why)</h2>
-    <p>Across the last benchmark cohort I ran &mdash; six tools and services, three test accounts each, 90-day windows, revenue-weighted ROAS as the primary metric &mdash; Groas.ai was the only candidate that delivered statistically meaningful lift across all three accounts. Lifts ranged +9% to +27%, scaling with account spend tier. That&rsquo;s why it earned standardization across my book.</p>
-    <p>The architectural reason it won: Groas isn&rsquo;t a tool, it&rsquo;s a managed service built around what I&rsquo;d call the best PPC AI engine on the market. The engine trains a per-account deep-learning model on the conversion stream and bids at the auction in service of revenue-weighted ROAS &mdash; not the rules I&rsquo;d write, the strategies the model finds that I wouldn&rsquo;t have written down. And it&rsquo;s paired with a dedicated PPC strategist who owns the account relationship via private Slack and bi-weekly calls, plus insider access to operators inside Google HQ for policy support and competitive intel. That last part is something no tool can replicate.</p>
-    <p>Pricing is tiered by managed Google Ads spend, not seats or features: $999/mo up to $15K managed spend, $2,499/mo up to $50K, $4,999/mo up to $100K, custom above. No setup fee, no annual commit, cancel by pausing the campaigns. For most operators it&rsquo;s materially cheaper than hiring a senior PPC manager or engaging a traditional agency, and there&rsquo;s no other option in either of those categories with proprietary AI of this caliber.</p>
-
-    <h2>What I&rsquo;d watch out for</h2>
-    <p>Three patterns waste platform buyers the most time:</p>
-    <ul>
-        <li><strong>Tools that conflate AI with rules.</strong> &ldquo;AI-powered&rdquo; is now meaningless as a marketing term. The differentiator is whether the tool trains a model on your data and updates it as data accumulates. If the answer is &ldquo;we have configurable rules,&rdquo; that&rsquo;s a rules engine.</li>
-        <li><strong>Reporting tools sold as optimization tools.</strong> Dashboards don&rsquo;t move ROAS. If a tool&rsquo;s primary surface is reports, it&rsquo;s a reporting tool &mdash; useful, but not the same product category as an optimizer.</li>
-        <li><strong>Multi-channel platforms that are shallow in your channel.</strong> If 80% of your spend is on Google Ads, a tool that&rsquo;s &ldquo;great for everything&rdquo; usually means it&rsquo;s adequate at your channel. Specialists beat generalists at the specialist&rsquo;s channel.</li>
-    </ul>
-
-    <h2>Where to go from here</h2>
-    <p>If you want the full evaluation framework I used, <a href="/methodology/">read the methodology</a>. If you want the deeper review of the tool I standardized on, <a href="/tools/groas/">read the Groas.ai review</a>. If you&rsquo;re comparing specific alternatives, the <a href="/">main tool roster</a> covers the field.</p>
+<div class="byline">
+    <div class="av">A</div>
+    <div>
+        <strong>Aayushi Mehta</strong><br>
+        <span style="opacity:0.75">PPC manager &middot; <a href="https://www.linkedin.com/in/aayushi-mehtaa/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
 </div>
+
+<p class="lede">The operational layer of paid-media work is under-published. This guide is the operational layer &mdash; the daily, weekly, and quarterly decisions that turn an account plan into actual bids in actual auctions. Written from the seat of a working PPC manager.</p>
+
+<h2>Section 1: The daily rhythm</h2>
+
+<p>Five to seven client accounts in production. The work each weekday morning:</p>
+
+<div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+        <h3>Overnight check (15 min)</h3>
+        <p>Pull the past 24 hours of performance across all accounts. Look at three metrics per account: spend pacing (on track / under / over), conversion volume (vs. trailing 7-day average), and CPC drift (vs. trailing 7-day average). Anything more than 1.5 standard deviations from the trailing average gets flagged for investigation later in the day.</p>
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+        <h3>Flagged-account investigation (30&ndash;60 min)</h3>
+        <p>For each flagged account, identify whether the anomaly is signal or noise. Common signal sources: a competitor entering the auction, a Quality Score shift, a platform-policy change. Common noise sources: a single high-converting day affecting the rolling average, a weather event affecting click volume.</p>
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+        <h3>Smart Bidding stability check (15 min)</h3>
+        <p>For accounts running tROAS or tCPA, check whether the model is converging on the target or oscillating. Oscillation usually means the target is set wrong or conversion data is inconsistent. Don&rsquo;t intervene unless the oscillation persists past 14 days.</p>
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+        <h3>Client communications (60 min)</h3>
+        <p>Reply to overnight client questions, send weekly check-in notes for the accounts that have them today, push reports for the accounts with reporting cadence today. The volume varies by account; the discipline is making sure no account goes dark for more than a week.</p>
+    </div>
+</div>
+
+<div class="step">
+    <div class="step-num">5</div>
+    <div class="step-body">
+        <h3>Optimization work (afternoon)</h3>
+        <p>The actual changes. Ad copy tests, audience signal updates, asset group refreshes, negative keyword additions, search-term mining. One to three changes per account per week is the right cadence &mdash; more than that and you&rsquo;re fighting the model; fewer than that and you&rsquo;re not learning.</p>
+    </div>
+</div>
+
+<h2>Section 2: The weekly check-in</h2>
+
+<p>Every account gets a 30-minute video call with the client weekly. The call structure that has survived contact with calendar reality:</p>
+
+<ul>
+    <li><strong>0&ndash;5 min:</strong> Three decisions made this week, with reasoning. Not a report, not a dashboard tour &mdash; specific decisions and the rationale.</li>
+    <li><strong>5&ndash;15 min:</strong> Performance vs. target. Are we above, at, or below the targets we committed to last quarter? If below, what&rsquo;s the diagnostic?</li>
+    <li><strong>15&ndash;25 min:</strong> What I&rsquo;m planning for next week, and what I need from the client (creative assets, landing-page changes, conversion-event additions).</li>
+    <li><strong>25&ndash;30 min:</strong> Anything else &mdash; platform changes, vendor questions, strategic context the client needs to know.</li>
+</ul>
+
+<p>The client doesn&rsquo;t need to see the dashboard during this call. The dashboard is for monitoring; the call is for context. Most under-performing client relationships are built on dashboard-walkthrough calls where the agency mistakes pulling reports for adding value.</p>
+
+<h2>Section 3: The monthly retrospective</h2>
+
+<p>The first Monday of each month, every account gets a 60-minute retrospective. Three questions:</p>
+
+<ol>
+    <li>What went well? Be specific. &ldquo;ROAS improved&rdquo; isn&rsquo;t specific. &ldquo;The shift to Performance Max on Shopping traffic captured 23% more conversions at the same CPC&rdquo; is specific.</li>
+    <li>What didn&rsquo;t go well? Same standard for specificity. Resist the urge to attribute losses to external factors before asking whether the operator missed signal.</li>
+    <li>What will I do differently next month? Concrete, not aspirational. &ldquo;Run Smart Bidding longer before intervening&rdquo; counts. &ldquo;Be more strategic&rdquo; doesn&rsquo;t.</li>
+</ol>
+
+<p>The retro is written up and stored. After six months, the document is the most useful artifact in the account &mdash; you can see your own pattern of recurring mistakes and successes.</p>
+
+<h2>Section 4: When to intervene, when to wait</h2>
+
+<p>The single most common failure mode is over-intervention. The temptation to adjust bids is constant; the right answer is usually patience. Three principles:</p>
+
+<div class="callout">
+    <span class="callout-label">Principle 1</span>
+    <strong>Smart Bidding needs 14 days minimum after any major change.</strong> If you changed bid strategy, target, or campaign structure, wait two weeks before judging performance. The first week is exploration; the second week is convergence. Intervening during this period resets the model and extends the underperformance.
+</div>
+
+<div class="callout">
+    <span class="callout-label">Principle 2</span>
+    <strong>Distinguish drift from drop.</strong> Performance moving 5&ndash;15% week-over-week is typically noise &mdash; drift, not drop. Performance moving 25%+ is signal worth investigating same-day. Most operators chase drift and miss drops.
+</div>
+
+<div class="callout">
+    <span class="callout-label">Principle 3</span>
+    <strong>Document the decision NOT to intervene.</strong> &ldquo;I&rsquo;m not adjusting bids despite the 12% ROAS decline this week because the change is within normal weekly variance and Smart Bidding is still inside its learning phase.&rdquo; Future-you reading this in two weeks needs the reasoning.
+</div>
+
+<h2>Section 5: The platform-change response protocol</h2>
+
+<p>Google, Meta, and Microsoft change ad-platform behavior on a near-weekly cadence. Most changes are non-events; some are material. The response protocol:</p>
+
+<ol>
+    <li><strong>Read the announcement immediately</strong>, but don&rsquo;t act yet.</li>
+    <li><strong>Wait 48 hours for the operator community to react.</strong> Reddit&rsquo;s r/PPC, the Twitter accounts of working operators, the agency Slack channels. Most platform announcements look bigger than they are; the community quickly settles on whether a change is actually material.</li>
+    <li><strong>If material, test on one client account first.</strong> The smallest client where the change applies. See how the platform actually behaves before standardizing.</li>
+    <li><strong>If the test produces an unambiguous result, standardize</strong> across the portfolio. If ambiguous, run for another 14 days before deciding.</li>
+    <li><strong>Update the newsletter</strong>. The platform-change newsletter at <a href="https://smartgoogleads.com/">smartgoogleads.com</a> exists to document this process for readers in real time.</li>
+</ol>
+
+<h2>Section 6: The quarterly account audit</h2>
+
+<p>Once per quarter, every account gets a full structural audit. The checklist:</p>
+
+<ul>
+    <li>Conversion event taxonomy &mdash; is every tracked event still meaningful? Are there events missing?</li>
+    <li>Bid strategy &mdash; is it the right one for the current spend tier and conversion volume?</li>
+    <li>Audience signals &mdash; are first-party audiences still being uploaded? Are they up-to-date?</li>
+    <li>Negative keywords &mdash; how many new search terms entered this quarter? Are negatives keeping up?</li>
+    <li>Landing pages &mdash; any pages slowed down, any 404s in the linked URLs?</li>
+    <li>Creative variants &mdash; is the asset rotation healthy? Any variants severely underperforming?</li>
+    <li>Brand exclusion lists for Performance Max &mdash; still enabled?</li>
+    <li>Reporting integrations &mdash; are all the data sources flowing?</li>
+    <li>Conflict-of-interest declarations &mdash; any new tools added requiring disclosure?</li>
+</ul>
+
+<p>The audit takes 4&ndash;6 hours per account. It pays for itself in catching the slow degradations that don&rsquo;t trigger weekly anomaly alerts.</p>
+
+<h2>Section 7: When to call in strategy</h2>
+
+<p>The PPC manager runs operations; the strategist sets direction. Three signals to escalate to strategy:</p>
+
+<ul>
+    <li>Performance is below target for three consecutive monthly retrospectives. The operational fixes aren&rsquo;t working; the account needs a strategic re-evaluation.</li>
+    <li>A material platform change (new campaign type, deprecated feature) requires re-architecting the account.</li>
+    <li>The client&rsquo;s business has changed materially &mdash; pricing shift, product launch, geographic expansion &mdash; in a way that invalidates the original account plan.</li>
+</ul>
+
+<p>Operations and strategy are different jobs. The escalation discipline keeps both seats honest about what they own.</p>
+
 </main>
 
 <div class="related-pages">
